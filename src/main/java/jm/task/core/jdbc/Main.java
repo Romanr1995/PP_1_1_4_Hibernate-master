@@ -25,12 +25,14 @@ public class Main {
             System.out.println("User с именем - " + user.getName() + " добавлен в базу данных");
         }
 
-        users = userService.getAllUsers();
+        List<User> userList = userService.getAllUsers();
 
-        System.out.println("All users: " + users);
+        System.out.println("All users: " + userList);
 
 
         userService.cleanUsersTable();
         userService.dropUsersTable();
+
+
     }
 }
